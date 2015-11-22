@@ -37,23 +37,25 @@ Unzip the file afterwards.
 ###Guide to create the tidy data file
 Description on how to create the tidy data file 
 
-1. Get the data, and then merges the training and the test sets to create one data set.
+####Get the data, and then merges the training and the test sets to create one data set.
 
 Download the file through R, using rbin and cbin to merges the file. 
 Renames the variable according to the provided documents "feature.txt"
 
-2. Extracts only the measurements on the mean and standard deviation for each measurement. 
+####Extracts only the measurements on the mean and standard deviation for each measurement. 
 
 "Scan" through the entire "feature.txt" file and left only the variable name contained "mean" & "std"
 Prepare a list of the pre-selected features' colunmn names to subset the entire data frame. 
 
-3. Uses descriptive activity names to name the activities in the data set
+####Uses descriptive activity names to name the activities in the data set
+
 Adopt the activity_label.txt and renames the corresponding part of the data set.
 
-4. Appropriately labels the data set with descriptive variable names. 
+####Appropriately labels the data set with descriptive variable names. 
+
 Rename/labels the data set with the aids of gsub function.
 
-5. From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+####From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 Apply library(plyr); and then aggregate the data and calculate the means according to the subject and activity. 
 Using "order" funtion to make the data more visible. 
